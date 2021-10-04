@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "content/post" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "page"
+    label: "Page"
+    editor:
+      preview: false
+    files:
+      - file: "content/_index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: "Intro", name: intro, widget: object, fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}
+          ]}
+          - {label: "Ho we are", name: ho_we_are, widget: object, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Upline", name: upline, widget: string},
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}
+          ]}
+          - {label: "Our services", name: our_services, widget: object, fields: [
+            {label: "Heading", name: heading, widget: string},
+            {label: "Upline", name: upline, widget: string},
+            {label: "Service", name: service, widget: list, fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Text", name: "text", widget: string}
+            ]}
+          ]}
+          - {label: "Work process", name: work_process, widget: object, fields: [
+              {label: "Heading", name: heading, widget: string},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Upline", name: upline, widget: string},
+              {label: "step", name: step, widget: list, fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Number", name: "number", widget: "image"},
+              {label: "Text", name: "text", widget: string}
+            ]}
+          ]}
+

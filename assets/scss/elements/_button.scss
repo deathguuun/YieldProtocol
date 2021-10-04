@@ -1,0 +1,40 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff;
+	border: 2px solid black;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: rgb(0, 0, 0);
+	&--lg {
+		width: 208px;
+		height: 48px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		&:hover {
+			background: rgb(145, 139, 139);
+		}
+		@include md-d {
+			width: 290px;
+		}
+	}
+	&--sm {
+		width: 80px;
+		height: 44px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&:hover {
+		transition: all 0.3s ease;
+		background: rgb(145, 139, 139);
+		color: #fff;
+	}
+	&:visited,
+	&:active {
+		background: #fff;
+	}
+}

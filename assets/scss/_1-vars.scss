@@ -1,0 +1,64 @@
+// 1. Colors
+//Body color
+$colorBody: #ffffff;
+//darkTheme
+$colorDarkBody: #000000;
+//Accent color
+$accent: rgb(236, 46, 179);
+
+//remark
+$remark: #d2d3e8;
+
+//TYPOGRAPHY
+//Main text
+$colorMain: #000000;
+//h1,h2,h3,h4,h5,h6
+$colorH1: #000000;
+$colorH2: #000000;
+$colorH3: #000000;
+$colorH4: #000000;
+$colorH5: #000000;
+$colorH6: #000000;
+
+//Slider colors
+$dotsCol: #dbe8ef;
+$dotsActiveCol: #3470ca;
+
+body {
+	background: $colorBody;
+	color: $colorMain;
+}
+h1 {
+	color: $colorH1;
+}
+h2 {
+	color: $colorH2;
+	position: relative;
+	display: inline-block;
+	padding-left: 60px;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		border-bottom: solid 3px $accent;
+		height: 0px;
+		width: 40px;
+		left: 0px;
+		top: 50%;
+	}
+}
+h3 {
+	color: $colorH3;
+}
+h4 {
+	color: $colorH4;
+}
+h5 {
+	color: $colorH5;
+}
+h6 {
+	color: $colorH6;
+}
+a {
+	color: $colorMain;
+}
