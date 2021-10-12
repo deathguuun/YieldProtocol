@@ -1,11 +1,9 @@
 // 1. Colors
-//Body color
-$colorBody: #ffffff;
+
 //darkTheme
 $colorDarkBody: #000000;
 //Accent color
-$accent: rgb(236, 46, 179);
-
+$accent: #8ce4a8;
 //remark
 $remark: #d2d3e8;
 
@@ -13,7 +11,7 @@ $remark: #d2d3e8;
 //Main text
 $colorMain: #000000;
 //h1,h2,h3,h4,h5,h6
-$colorH1: #000000;
+$colorH1: #30393e;
 $colorH2: #000000;
 $colorH3: #000000;
 $colorH4: #000000;
@@ -21,31 +19,45 @@ $colorH5: #000000;
 $colorH6: #000000;
 
 //Slider colors
-$dotsCol: #dbe8ef;
+$dotsCol: #09a1f3;
 $dotsActiveCol: #3470ca;
 
+:root {
+	--bg-color: #ffffff;
+	--text-color: #30393e;
+	--statickColorWhite: #ffffff;
+	--h2TextColor: #30393e;
+	--benefitsBgColor: #e8eff2;
+	--benefitsCardBgColor: linear-gradient(0deg, #ffffff, #ffffff), rgba(24, 32, 35, 0.8);
+	--benefitsText: #597483;
+	--buttonBorder: #30393e;
+}
+
+[data-theme="dark"] {
+	--bg-color: #10181c;
+	--text-color: #e0e0e0;
+	--statickColor: #30393e;
+	--statickColorWhite: #e0e0e0;
+	--h2TextColor: #ffffff;
+	--benefitsBgColor: #10181c;
+	--benefitsCardBgColor: linear-gradient(0deg, #30393e, #30393e), rgba(24, 32, 35, 0.8);
+	--benefitsText: #788f9c;
+	--buttonBorder: #8ee3a6;
+}
+
 body {
-	background: $colorBody;
-	color: $colorMain;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+	font-family: "Playfair Display";
+}
+span {
+	color: $accent;
 }
 h1 {
-	color: $colorH1;
+	color: var(--h2TextColor);
 }
 h2 {
-	color: $colorH2;
-	position: relative;
-	display: inline-block;
-	padding-left: 60px;
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		border-bottom: solid 3px $accent;
-		height: 0px;
-		width: 40px;
-		left: 0px;
-		top: 50%;
-	}
+	color: var(--h2TextColor);
 }
 h3 {
 	color: $colorH3;
@@ -58,7 +70,4 @@ h5 {
 }
 h6 {
 	color: $colorH6;
-}
-a {
-	color: $colorMain;
 }

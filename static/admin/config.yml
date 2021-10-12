@@ -5,6 +5,22 @@ media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+
+  - name: settings
+    label: Settings
+    files:
+      - file: "data/settings/header_menu.yml"
+        label: Header Menu
+        name: header_menu
+        fields:
+          - label: Nav items
+            name: nav_items
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Path, name: path, widget: string}
+          - {label: Header CTA Button text, name: header_cta_button_text, widget: string}
+          - {label: Header CTA Button url, name: header_cta_button_url, widget: string}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "content/post" # The path to the folder where the documents are stored
@@ -25,36 +41,61 @@ collections: # A list of collections the CMS should be able to edit
         name: "home"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}
+          - {label: Intro, name: intro, widget: object, fields: [
+          {label: "Small Heading", name: "small_heading", widget: string},
+          {label: "Large Heading", name: "large_heading", widget: string},
+          {label: Text, name: text, widget: markdown},
+          {label: Green CTA Button text, name: green_cta_button_text, widget: string},
+          {label: Green CTA Button url, name: green_cta_button_url, widget: string},
+          {label: White CTA Button text, name: white_cta_button_text, widget: string},
+          {label: White CTA Button url, name: white_cta_button_url, widget: string},
+          {label: Intro image, name: image, widget: image},
+          {label: Brands, name: brands, widget: list, fields: [
+          {label: Logo, name: logo, widget: image}
+          ]},
+          {label: Image 2, name: image2, widget: image},
+          {label: Text 2, name: text2, widget: markdown}
           ]}
-          - {label: "Ho we are", name: ho_we_are, widget: object, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Upline", name: upline, widget: string},
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}
+          - {label: Benefits, name: benefits, widget: object, fields: [
+          {label: Image 1, name: image1, widget: image},
+          {label: Heading 1, name: heading1, widget: string},
+          {label: Text 1, name: text1, widget: text},
+          {label: Image 2, name: image2, widget: image},
+          {label: Heading 2, name: heading2, widget: string},
+          {label: Text 2, name: text2, widget: text},
+          {label: Image 3, name: image3, widget: image},
+          {label: Heading 3, name: heading3, widget: string},
+          {label: Text 3, name: text3, widget: text},
+          {label: Button text, name: button_text, widget: string},
+          {label: Button url, name: button_url, widget: string},
           ]}
-          - {label: "Our services", name: our_services, widget: object, fields: [
-            {label: "Heading", name: heading, widget: string},
-            {label: "Upline", name: upline, widget: string},
-            {label: "Service", name: service, widget: list, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: string}
-            ]}
+          - {label: Highly secure, name: highly_secure, widget: object, fields: [
+          {label: Title, name: title, widget: string},
+          {label: Image 1, name: image1, widget: image},
+          {label: Heading 1, name: heading1, widget: string},
+          {label: Text 1, name: text1, widget: string},
+          {label: Image 2, name: image2, widget: image},
+          {label: Heading 2, name: heading2, widget: string},
+          {label: Text 2, name: text2, widget: string},
+          {label: Image 3, name: image3, widget: image},
+          {label: Heading 3, name: heading3, widget: string},
+          {label: Text 3, name: text3, widget: string},
+          {label: Image 4, name: image4, widget: image},
+          {label: Heading 4, name: heading4, widget: string},
+          {label: Text 4, name: text4, widget: string},
+          {label: Big Image, name: big_image, widget: image},
           ]}
-          - {label: "Work process", name: work_process, widget: object, fields: [
-              {label: "Heading", name: heading, widget: string},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Upline", name: upline, widget: string},
-              {label: "step", name: step, widget: list, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Number", name: "number", widget: "image"},
-              {label: "Text", name: "text", widget: string}
-            ]}
+          - {label: Stats, name: stats, widget: object, fields: [
+          {label: Title, name: title, widget: string},
+          {label: Text, name: text, widget: markdown},
+          {label: Heading 1, name: heading1, widget: string},
+          {label: Text 1, name: text1, widget: string},
+          {label: Heading 2, name: heading2, widget: string},
+          {label: Text 2, name: text2, widget: string},
+          {label: Heading 3, name: heading3, widget: string},
+          {label: Text 3, name: text3, widget: string},
+          {label: Heading 4, name: heading4, widget: string},
+          {label: Text 4, name: text4, widget: string},
+          {label: Button text, name: button_text, widget: string},
+          {label: Button url, name: button_url, widget: string},
           ]}
-

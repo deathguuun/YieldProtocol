@@ -1,0 +1,60 @@
+.stats {
+	&__title {
+		margin-top: 20px;
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 685px;
+		color: #597483;
+		line-height: 24px;
+		margin-top: 20px;
+	}
+	&__content {
+		margin-top: 50px;
+		color: #597483;
+		display: flex;
+		justify-content: space-around;
+		@include sm-d {
+			flex-wrap: wrap;
+		}
+	}
+	&__card {
+		border-right: 2px solid #597483;
+		flex: 0 1 25%;
+		&:last-child {
+			border-right: none;
+		}
+		@include sm-d {
+			max-width: 190px;
+			flex: 1 0 100%;
+			padding-bottom: 30px;
+			margin-top: 20px;
+			border-right: none;
+			border-bottom: 2px solid #597483;
+		}
+		@include xs-d {
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	&__card-title {
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__card-numbers {
+		text-align: center;
+		font-weight: 900;
+		font-size: 36px;
+		line-height: 35px;
+		margin-top: 18px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+	}
+}

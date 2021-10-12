@@ -1,0 +1,15 @@
+nav_items:
+  - label: ECOSYSTEM
+    path: "#"
+  - label: FOR DEVELOPERS
+    path: "#"
+  - label: SECURITY
+    path: "#"
+  - label: ABOUT
+    path: "#"
+  - label: COMMUNITY
+    path: "#"
+  - label: PARTNERSHIPS
+    path: "#"
+header_cta_button_text: CONTACT US
+header_cta_button_url: "#"

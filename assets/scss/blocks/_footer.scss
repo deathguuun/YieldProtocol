@@ -1,2 +1,51 @@
 .footer {
+	padding: 35px 0px 35px 0px;
+	background: #000;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.06em;
+		color: #586871;
+		@include md-d {
+			flex-wrap: wrap-reverse;
+			justify-content: center;
+		}
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+
+		p {
+			margin-left: 55px;
+			@include md-d {
+				flex-direction: column;
+				margin-left: 0;
+				margin-top: 25px;
+			}
+		}
+		@include md-d {
+			flex-direction: column;
+			margin-top: 50px;
+		}
+	}
+	&__link {
+		display: flex;
+		text-align: center;
+		@include md-d {
+			justify-content: space-between;
+		}
+	}
+	&__item {
+		margin-left: 50px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			color: $accent;
+		}
+	}
 }

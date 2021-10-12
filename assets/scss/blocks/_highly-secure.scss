@@ -1,0 +1,47 @@
+.highly-secure {
+	margin-top: 40px;
+	@include md-d {
+		margin-top: 30px;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 66px;
+		@include md-d {
+			margin-bottom: 20px;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		@include sm-d {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin-left: 40px;
+		}
+	}
+	&__item {
+		max-width: 225px;
+		@include sm-d {
+			flex: 0 1 100%;
+			margin-top: 30px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	&__name {
+		margin-top: 29px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+	}
+	&__text {
+		margin-top: 15px;
+		color: var(--benefitsText);
+	}
+	&__background {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+	}
+}

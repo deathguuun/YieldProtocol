@@ -1,0 +1,33 @@
+<section class="benefits">
+    <div class="container">
+        <div class="benefits__wrapper">
+            <div class="benefits__card">
+                <div class="benefits__img"><img src="{{ .Params.benefits.image1 }}" alt="benefits"></div>
+                <div class="benefits__content">
+                    <div class="benefits__title">{{ .Params.benefits.heading1 }}</div>
+                    <div class="benefits__text">{{ .Params.benefits.text1 }}
+                    </div>
+                </div>
+            </div>
+            <div class="benefits__card">
+                <div class="benefits__img"><img src="{{ .Params.benefits.image2 }}" alt="benefits"></div>
+                <div class="benefits__content">
+                    <div class="benefits__title">{{ .Params.benefits.heading2 }}</div>
+                    <div class="benefits__text">{{ .Params.benefits.text2 }}
+                    </div>
+                </div>
+            </div>
+            <div class="benefits__card">
+                <div class="benefits__img"><img src="{{ .Params.benefits.image3 }}" alt="benefits"></div>
+                <div class="benefits__content">
+                    <div class="benefits__title">{{ .Params.benefits.heading3 }}</div>
+                    <div class="benefits__text">{{ .Params.benefits.text3 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefits__button btn btn--green btn--ex-lg">
+            <a href="{{ .Params.benefits.button_url }}">{{ .Params.benefits.button_text }}</a>
+        </div>
+    </div>
+</section>

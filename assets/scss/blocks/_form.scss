@@ -1,0 +1,132 @@
+.form {
+	background: linear-gradient(0deg, #2f383d, #2f383d), rgba(24, 32, 35, 0.8);
+	backdrop-filter: blur(10px);
+	padding: 50px 0px 90px 0px;
+	margin-top: 64px;
+	&__title {
+		margin-bottom: 30px;
+		@include sm-d {
+			font-size: 30px;
+			line-height: 45px;
+		}
+	}
+	&__mail {
+		display: flex;
+		@include sm-d {
+			flex-wrap: wrap;
+		}
+	}
+	input {
+		width: 820px;
+		background: linear-gradient(0deg, #2f383d, #2f383d), rgba(24, 32, 35, 0.8);
+		opacity: 0.5;
+		border: 1.5px solid #ffffff;
+		border-radius: 4px;
+		padding: 29px 0px 29px 20px;
+		color: #fff;
+		&::placeholder {
+			color: #ffffff;
+		}
+	}
+	&__button {
+		width: 189px;
+		margin-left: 21px;
+		@include sm-d {
+			width: 350px;
+			height: 70px;
+			margin-left: 0;
+			margin-top: 20px;
+		}
+	}
+	&__menu {
+		display: flex;
+		margin-top: 88px;
+		align-items: center;
+		@include lg-d {
+			flex-wrap: wrap;
+		}
+		@include md-d {
+			flex-direction: column;
+			margin-top: 40px;
+			align-items: flex-start;
+		}
+	}
+	&__list {
+		display: flex;
+		color: #ffffff;
+		@include lg-d {
+			margin-right: 30px;
+		}
+		@include md-d {
+			flex-direction: column;
+			margin-right: 0;
+		}
+	}
+	&__item {
+		margin-left: 32px;
+		white-space: nowrap;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.03em;
+		a {
+			&:hover {
+				color: $accent;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		@include xl-d {
+			margin-left: 28px;
+		}
+		@include md-d {
+			margin-left: 40px;
+			margin-top: 24px;
+			&:first-child {
+				margin-left: 40px;
+				margin-top: 0;
+			}
+		}
+	}
+	&__follow {
+		display: none;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0.03em;
+		color: #597483;
+		@include md-d {
+			display: block;
+			margin-left: 40px;
+			margin-top: 40px;
+		}
+	}
+	&__link {
+		display: flex;
+		margin-left: 50px;
+		@include xl-d {
+			margin-left: 20px;
+		}
+		@include lg-d {
+			margin-left: 30px;
+			margin-top: 30px;
+		}
+		@include md-d {
+			margin-left: 55px;
+			margin-top: 25px;
+		}
+		@include sm-d {
+			flex-wrap: wrap;
+		}
+	}
+	&__icon {
+		margin-right: 40px;
+		&:last-child {
+			margin-left: 0;
+		}
+		@include md-d {
+			margin-top: 15px;
+		}
+	}
+}

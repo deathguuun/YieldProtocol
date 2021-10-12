@@ -1,2 +1,40 @@
 <section class="intro">
+	<div class="container">
+		<div class="intro__wrapper">
+			<div class="intro__text">
+				<p>{{ .Params.intro.small_heading }}</p>
+				<h1>{{ .Params.intro.large_heading }}</h1>
+				<div class="intro__remark">
+                    {{ .Params.intro.text | safeHTML }}
+				</div>
+				<div class="intro__button">
+					<a href="{{ .Params.intro.green_cta_button_url}}" class="btn btn--green btn--intro-green">{{ .Params.intro.green_cta_button_text}}</a>
+					<a href="{{ .Params.intro.white_cta_button_url}}" class="btn btn--white">{{ .Params.intro.white_cta_button_text}}</a>
+				</div>
+			</div>
+			<div class="intro__images">
+				<img src="{{ .Params.intro.image}}" alt="intro image">
+			</div>
+		</div>
+
+		<div class="intro__outline">
+            {{  range .Params.intro.brands }}
+
+            <div class="intro__brand">
+                <img src="{{ .logo }}" alt="brand logo">
+            </div>
+            {{ end }}
+
+
+		</div>
+
+		<div class="intro__info">
+			<div class="intro__info-img">
+				<img src="{{ .Params.intro.image2}}" alt="second intro image">
+			</div>
+			<h2 class="intro__info-text">
+                {{ .Params.intro.text2 | safeHTML }}
+			</h2>
+		</div>
+	</div>
 </section>

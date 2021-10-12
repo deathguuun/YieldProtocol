@@ -1,0 +1,54 @@
+<section class="highly-secure">
+	<div class="container">
+		<h2 class="highly-secure__title">{{ .Params.highly_secure.title }}</h2>
+		<div class="highly-secure__content">
+			<div class="highly-secure__item">
+				<div class="highly-secure__images">
+					<img src="{{ .Params.highly_secure.image1 }}" alt="security icon">
+				</div>
+				<div class="highly-secure__name">
+					{{ .Params.highly_secure.heading1 }}
+				</div>
+				<div class="highly-secure__text">
+					{{ .Params.highly_secure.text1 | safeHTML }}
+				</div>
+			</div>
+			<div class="highly-secure__item">
+				<div class="highly-secure__images">
+					<img src="{{ .Params.highly_secure.image2 }}" alt="security icon">
+				</div>
+				<div class="highly-secure__name">
+					{{ .Params.highly_secure.heading2 }}
+				</div>
+				<div class="highly-secure__text">
+					{{ .Params.highly_secure.text2 }}
+				</div>
+			</div>
+			<div class="highly-secure__item">
+				<div class="highly-secure__images">
+					<img src="{{ .Params.highly_secure.image3 }}" alt="security icon">
+				</div>
+				<div class="highly-secure__name">
+					{{ .Params.highly_secure.heading3 }}
+				</div>
+				<div class="highly-secure__text">
+					{{ .Params.highly_secure.text3 }}
+				</div>
+			</div>
+			<div class="highly-secure__item">
+				<div class="highly-secure__images">
+					<img src="{{ .Params.highly_secure.image4 }}" alt="security icon">
+				</div>
+				<div class="highly-secure__name">
+					{{ .Params.highly_secure.heading4 }}
+				</div>
+				<div class="highly-secure__text">
+					{{ .Params.highly_secure.text4 }}
+				</div>
+			</div>
+		</div>
+		<div class="highly-secure__background">
+			<img src="{{ .Params.highly_secure.big_image }}" alt="security image">
+		</div>
+	</div>
+</section>

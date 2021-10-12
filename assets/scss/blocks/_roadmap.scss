@@ -1,0 +1,57 @@
+.roadmap {
+	margin-top: 110px;
+	@include md-d {
+		margin-top: 60px;
+	}
+
+	&__wrapper {
+		background: #2f383d;
+		backdrop-filter: blur(10px);
+		border-radius: 4px;
+		padding: 40px 0px 58px 0px;
+	}
+	&__title {
+		color: #fff;
+		text-align: center;
+	}
+	&__point {
+		display: flex;
+		justify-content: space-around;
+		color: $accent;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+		margin-top: 56px;
+		@include md-d {
+			flex-wrap: wrap;
+		}
+	}
+	&__line {
+		margin-top: 31px;
+		svg {
+			max-width: 100%;
+		}
+	}
+	&__content {
+		margin-top: 13px;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__list {
+		color: #fff;
+		ol {
+			margin-top: 15px;
+		}
+		li {
+			list-style-type: disc;
+		}
+	}
+	//&__outline {
+	//	font-weight: bold;
+	//	font-size: 24px;
+	//	line-height: 36px;
+	//	color: #ffffff;
+	//	margin-top: 72px;
+	//	margin-left: 85px;
+	//}
+}

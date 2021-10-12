@@ -1,0 +1,59 @@
+.benefits {
+	padding: 50px 0px 50px 0px;
+	background-color: var(--benefitsBgColor);
+	@include md-d {
+		padding: 40px 0px 40px 0px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include lg-d {
+			justify-content: space-around;
+		}
+	}
+	&__card {
+		max-width: 400px;
+		color: var(--h2TextColor);
+		background: var(--benefitsCardBgColor);
+		backdrop-filter: blur(10px);
+		/* Note: backdrop-filter has minimal browser support */
+		margin-top: 20px;
+		border-radius: 4px;
+		@include md-d {
+			max-width: 320px;
+		}
+	}
+	&__img {
+		opacity: 0.5;
+		transition: all 0.5s ease 0s;
+		object-fit: cover;
+		&:hover {
+			opacity: 1;
+		}
+		img {
+			@include md-d {
+				width: 320px;
+			}
+		}
+	}
+	&__content {
+		padding: 35px 20px 40px 20px;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		color: var(--h2TextColor);
+	}
+	&__text {
+		margin-top: 22px;
+		font-size: 14px;
+		line-height: 22px;
+		color: var(--benefitsText);
+	}
+	&__button {
+		text-align: center;
+		margin: 30px auto 0;
+	}
+}

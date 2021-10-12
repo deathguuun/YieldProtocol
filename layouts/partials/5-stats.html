@@ -1,0 +1,27 @@
+<section class="stats">
+	<div class="container">
+		<h2 class="stats__title">{{ .Params.stats.title }}</h2>
+		<div class="stats__text">{{ .Params.stats.text }}</div>
+		<div class="stats__content">
+			<div class="stats__card">
+				<div class="stats__card-title">{{ .Params.stats.heading1 }}</div>
+				<div class="stats__card-numbers">{{ .Params.stats.text1 }}</div>
+			</div>
+			<div class="stats__card">
+				<div class="stats__card-title">{{ .Params.stats.heading2 }}</div>
+				<div class="stats__card-numbers">{{ .Params.stats.text2 }}</div>
+			</div>
+			<div class="stats__card">
+				<div class="stats__card-title">{{ .Params.stats.heading3 }}</div>
+				<div class="stats__card-numbers">{{ .Params.stats.text3 }}</div>
+			</div>
+			<div class="stats__card">
+				<div class="stats__card-title">{{ .Params.stats.heading4 }}</div>
+				<div class="stats__card-numbers">{{ .Params.stats.text4 }}</div>
+			</div>
+		</div>
+		<div class="stats__wrapper">
+			<div class="stats__button btn btn--green btn--intro-green"><a href="{{ .Params.stats.button_url }}">{{ .Params.stats.button_text }}</a></div>
+		</div>
+	</div>
+</section>

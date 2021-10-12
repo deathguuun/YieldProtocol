@@ -2,25 +2,76 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #ffffff;
-	border: 2px solid black;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	border-radius: 4px;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	color: rgb(0, 0, 0);
-	&--lg {
-		width: 208px;
-		height: 48px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 20px;
+	z-index: 2;
+	color: var(--statickColor);
+	&--green {
+		background: #8ee3a6;
+		box-shadow: 0px 3px 8px rgba(89, 116, 131, 0.25);
 		&:hover {
-			background: rgb(145, 139, 139);
+			background: #ffffff;
+			border: 2px solid #30393e;
+			box-shadow: 0px 3px 8px rgba(89, 116, 131, 0.25);
 		}
+	}
+	&--intro-green {
+		width: 322px;
+		height: 70px;
+		text-align: center;
+		@include sm-d {
+			width: 350px;
+		}
+		// @include xs-d {
+		// 	width: 300px;
+		// }
+	}
+	&--white {
+		white-space: nowrap;
+		background: transparent;
+		height: 70px;
+		border: 2px solid var(--buttonBorder);
+		box-shadow: 0px 3px 8px rgba(89, 116, 131, 0.25);
+		padding: 19px 37px;
+		color: var(--buttonBorder);
+		&:hover {
+			background: #8ee3a6;
+			box-shadow: 0px 3px 8px rgba(89, 116, 131, 0.25);
+			border-color: #8ee3a6;
+		}
+		@include sm-d {
+			width: 350px;
+		}
+	}
+	&--ex-lg {
+		width: 373px;
+		height: 76px;
+		color: #10181c;
+		@include xs-d {
+			width: 350px;
+		}
+	}
+	&--nav {
+		height: 50px;
 		@include md-d {
-			width: 290px;
+			width: 350px;
+			height: 70px;
 		}
 	}
 	&--sm {
+		width: 295px;
+		height: 70px;
+		color: #10181c;
+
+		@include sm-d {
+			width: 350px;
+		}
+	}
+	&--header {
 		width: 80px;
 		height: 44px;
 		font-weight: 600;
@@ -30,11 +81,9 @@
 
 	&:hover {
 		transition: all 0.3s ease;
-		background: rgb(145, 139, 139);
-		color: #fff;
 	}
 	&:visited,
 	&:active {
-		background: #fff;
+		color: inherit;
 	}
 }

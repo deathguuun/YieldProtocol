@@ -1,2 +1,152 @@
 .intro {
+	&__wrapper {
+		margin-top: 64px;
+		display: flex;
+		margin-bottom: 20px;
+		justify-content: space-between;
+		@include lg-d {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 0;
+		}
+		@include md-d {
+			margin-top: 0;
+		}
+		@include sm-d {
+			flex-wrap: wrap-reverse;
+			justify-content: flex-start;
+			margin-bottom: 30px;
+		}
+	}
+	&__text {
+		flex: 0 1 50%;
+		@include lg-d {
+			flex: 0 1 100%;
+		}
+		p {
+			margin-top: 57px;
+			letter-spacing: 0.7em;
+			line-height: 14px;
+
+			@include lg-d {
+				margin-top: 10px;
+			}
+		}
+		h1 {
+			margin-top: 18px;
+		}
+
+		@include md-d {
+			flex: 1 1 100%;
+		}
+	}
+	&__remark {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 28px;
+		letter-spacing: 0.01em;
+		color: #597483;
+	}
+	&__button {
+		margin-top: 40px;
+		display: flex;
+		.btn--intro-green {
+			color: var(--statickColor);
+		}
+		.btn--white {
+			margin-left: 25px;
+			color: var(--buttonBorder);
+			&:hover {
+				color: var(--statickColor);
+			}
+			@include sm-d {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+		@include sm-d {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 30px;
+		}
+	}
+	&__images {
+		@include lg-d {
+			margin-top: 30px;
+		}
+		@include md-d {
+			margin-top: 0;
+			img {
+				max-width: 400px;
+			}
+		}
+		@include sm-d {
+			img {
+				max-width: 150px;
+			}
+		}
+	}
+	&__outline {
+		padding: 30px 0px;
+		margin-bottom: 50px;
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+		border-color: rgba(89, 116, 131, 0.1);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include md-d {
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+		}
+		@include sm-d {
+			padding: 15px 0;
+			margin-bottom: 0;
+		}
+	}
+	&__brand {
+		opacity: 0.5;
+		text-align: center;
+
+		@include md-d {
+			flex: 1 0 33.3%;
+		}
+		@include md-d {
+			flex: 1 0 50%;
+			margin-top: 15px;
+			&:last-child {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		@include md-d {
+		}
+		@include sm-d {
+			flex-wrap: wrap;
+		}
+	}
+	&__info-img {
+		flex: 1 0 50%;
+		display: flex;
+		justify-content: center;
+		@include sm-d {
+			img {
+				align-self: center;
+			}
+		}
+		@include md-d {
+			img {
+				max-width: 350px;
+			}
+		}
+	}
+	&__info-text {
+		@include sm-d {
+			margin-bottom: 30px;
+		}
+	}
 }

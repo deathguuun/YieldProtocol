@@ -1,0 +1,25 @@
+.available {
+	margin-top: 103px;
+	@include md-d {
+		margin-top: 60px;
+	}
+	&__title {
+		text-align: center;
+	}
+	&__wrapper {
+		margin-top: 53px;
+		display: flex;
+		flex-wrap: wrap;
+		@include md-d {
+		}
+	}
+	&__image {
+		display: flex;
+		flex: 1 0 20%;
+		margin-bottom: 40px;
+		@include md-d {
+			flex: 1 1 50%;
+			justify-content: center;
+		}
+	}
+}

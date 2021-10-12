@@ -1,0 +1,30 @@
+.toggle-button {
+	-webkit-appearance: none;
+	outline: none;
+	width: 33px;
+	height: 16px;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #596474;
+	cursor: pointer;
+	border-radius: 8px;
+	position: relative;
+	transition: 0.4s;
+	z-index: 2;
+}
+.toggle-button:before {
+	content: "";
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	top: 2px;
+	left: 2px;
+	background-color: #597483;
+	transition: 0.4s;
+}
+.toggle-button:checked {
+	background-color: #597483;
+}
+.toggle-button:checked:before {
+	transform: translate(140%);
+	transition: 0.4s;
+}
